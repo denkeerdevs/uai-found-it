@@ -8,7 +8,7 @@ class Home extends BaseController
     {
         // return view('welcome_message');
         echo view('templates/v_header');
-        # echo view('templates/v_sidebar');
+        #echo view('templates/v_sidebar');
         #echo view('templates/v_topbar');
         echo view('home/index');
         echo view('templates/v_footer');
@@ -18,9 +18,19 @@ class Home extends BaseController
     {
         //return view('welcome_message');
         echo view('templates/v_header');
-        # echo view('templates/v_sidebar');
+        #echo view('templates/v_sidebar');
         #echo view('templates/v_topbar');
         echo view('home/form_lapor');
+        echo view('templates/v_footer');
+    }
+
+    public function card_barang()
+    {
+        //return view('welcome_message');
+        echo view('templates/v_header');
+        # echo view('templates/v_sidebar');
+        echo view('templates/v_topbar');
+        echo view('home/card_barang');
         echo view('templates/v_footer');
     }
 }

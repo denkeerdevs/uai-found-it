@@ -7,7 +7,7 @@
         <div class="col-lg-6 mx-auto">
             <p class="lead mb-4">Apakah salah satu barang mu terdaftar disini? Segera Lihat Barang Hilang!</p>
             <div class="d-grid gap-4 d-md-block">
-                <button class="btn btn-info" type="button">Cari Barang Hilang</button>
+            <a class="btn btn-info" href="home/card_barang" role="button">Cari Barang Hilang</a>
                 <a class="btn btn-info" href="home/form_lapor" role="button">Lapor Barang Hilang</a>
             </div>
         </div>

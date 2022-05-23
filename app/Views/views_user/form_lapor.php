@@ -3,7 +3,7 @@
         <div class="row justify-content-center">
             <div class="my-5 text-center">
                 <h2>Form Lapor Barang Hilang</h2>
-                <p class="lead">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
+                <p class="lead">Isi data barang sesuai dengan apa yang kamu temukan!</p>
             </div>
             <div class="col">
                 <h4 class="mb-3">Detail Barang</h4>

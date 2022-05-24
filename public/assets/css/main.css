@@ -1,0 +1,35 @@
+img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* nav {
+    position: sticky;
+    padding: 10px;
+    top: 0;
+    z-index: 99 ;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+    height: 50px;
+    width: 100%;
+    background-color: white;
+  }
+  nav ul {
+    text-align:center;
+  }
+  nav li{
+    display: inline;
+    padding-left: 20px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  nav a {
+    text-decoration: none;
+    color: #082A5A;
+
+  }
+  nav a:hover {
+    text-decoration: none;
+
+  } */

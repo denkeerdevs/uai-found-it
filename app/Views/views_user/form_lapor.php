@@ -7,14 +7,15 @@
             </div>
             <div class="col">
                 <h4 class="mb-3">Detail Barang</h4>
-                <form class="row g-3">
+                <form class="row g-3" action="/home/save_barang" method="post">
+                    <?= csrf_field(); ?>
                     <div class="col-12">
-                        <label for="inputAddress" class="form-label">Nama Barang</label>
-                        <input type="text" class="form-control" id="inputAddress" placeholder="Tuliskan nama barang disini">
+                        <label for="nama_barang" class="form-label">Nama Barang</label>
+                        <input type="text" class="form-control" id="nama_barang" placeholder="Tuliskan nama barang disini" name="nama_barang" autofocus>
                     </div>
                     <div class="col-12">
-                        <label for="inputAddress" class="form-label">Jenis Barang</label>
-                        <select class="form-select" aria-label="Default select example">
+                        <label for="kategori_barang" class="form-label">Jenis Barang</label>
+                        <select class="form-select" aria-label="Default select example" name="kategori_barang">
                             <option selected>Pilih jenis barang</option>
                             <option value="1">Elektronik</option>
                             <option value="2">Buku/Majalah</option>
@@ -22,18 +23,21 @@
                         </select>
                     </div>
                     <div class="col-12">
-                        <label for="exampleFormControlTextarea1" class="form-label">Deskripsi Barang</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <label for="deskripsi" class="form-label">Deskripsi Barang</label>
+                        <textarea class="form-control" id="deskripsi" rows="3" name="deskripsi"></textarea>
                     </div>
                     <div class="col-12">
-                        <label for="exampleFormControlTextarea1" class="form-label">Lokasi Ditemukan</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <label for="lokasi" class="form-label">Lokasi Ditemukan</label>
+                        <textarea class="form-control" id="lokasi" rows="3" name="lokasi"></textarea>
                     </div>
                     <div class="col-12">
                         <div class="mb-3">
                             <label for="formFile" class="form-label">Foto Gambar</label>
                             <input class="form-control" type="file" id="formFile">
                         </div>
+                    </div>
+                    <div class="col-12 d-md-flex justify-content-md-end">
+                        <button class="btn btn-primary" type="submit">LAPOR!</button>
                     </div>
                 </form>
                 <h4 class="mb-3">Data Pelapor</h4>

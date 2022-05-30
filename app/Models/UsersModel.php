@@ -8,7 +8,7 @@ class UsersModel extends Model
 {
     protected $table = 'data_barang';
     protected $primaryKey = 'id_barang';
-    protected $allowedFields = ['nama_barang', 'kategori_barang', 'deskripsi_barang', 'lokasi_barang', 'id_penemu'];
+    protected $allowedFields = ['nama_barang', 'kategori_barang', 'deskripsi_barang', 'lokasi_barang', 'foto_barang', 'id_penemu'];
     public function getData()
     {
         return $this->db->table('data_barang')

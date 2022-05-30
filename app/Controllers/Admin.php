@@ -8,11 +8,7 @@ class Admin extends BaseController
 {
     public function index()
     {
-        echo view('templates_admin/header');
-        echo view('templates_admin/sidebar');
-        echo view('templates_admin/topbar');
-        echo view('views_admin/dashboard');
-        echo view('templates_admin/footer');
+        echo view('views_admin/home');
     }
 
     public function data_masuk()
@@ -35,5 +31,10 @@ class Admin extends BaseController
         echo view('templates_admin/topbar');
         echo view('views_admin/data_keluar');
         echo view('templates_admin/footer');
+    }
+
+    public function dashboard()
+    {
+        echo view('views_admin/home');
     }
 }

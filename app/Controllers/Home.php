@@ -32,10 +32,13 @@ class Home extends BaseController
         //dd($this->request->getVar()); //untuk cek masuk db apa engga
         //$this->nama model->save(apa yang mau disave pake array)
         $this->usersModel->save([
-            'nama_barang' => $this->request->getVar('nama_barang'),
-            'kategori_barang' => $this->request->getVar('kategori_barang'),
-            'deskripsi_barang' => $this->request->getVar('deskripsi'),
-            'lokasi_barang' => $this->request->getVar('lokasi')
+            'nama_barang'       => $this->request->getVar('nama_barang'),
+            'kategori_barang'   => $this->request->getVar('kategori_barang'),
+            'deskripsi_barang'  => $this->request->getVar('deskripsi'),
+            'lokasi_barang'     => $this->request->getVar('lokasi'),
+            'nama_penemu'       => $this->request->getVar('nama_pelapor'),
+            'email_penemu'      => $this->request->getVar('email_penemu'),
+            'no_hp_penemu'      => $this->request->getVar('no_hp')
         ]);
 
         return redirect()->to('/home');

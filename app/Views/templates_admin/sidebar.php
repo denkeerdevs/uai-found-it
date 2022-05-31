@@ -1,81 +1,36 @@
-<body id="page-top">
+<aside id="sidebar-wrapper">
+    <div class="sidebar-brand">
+        <a href="<?= site_url('admin/dashboard') ?>">UAI Found It!</a>
+    </div>
+    <div class="sidebar-brand sidebar-brand-sm">
+        <a href="<?= site_url('admin/dashboard') ?>">UFI</a>
+    </div>
+    <ul class="sidebar-menu">
+        <li class="menu-header">Dashboard</li>
+        <li><a class="nav-link" href="<?= site_url('admin/dashboard') ?>"><i class="fas fa-home"></i> <span>Dashboard</span></a></li>
 
-    <!-- Page Wrapper -->
-    <div id="wrapper">
+        <li class="menu-header">MASTER DATA</li>
+        <li class="nav-item dropdown">
+            <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>Data Barang</span></a>
+            <ul class="dropdown-menu">
+                <li><a class="nav-link" href="<?= site_url('admin/data-masuk') ?>">Data Barang Masuk</a></li>
+                <li><a class="nav-link" href="<?= site_url('admin/data-keluar') ?>">Data Barang Ambil</a></li>
+            </ul>
+        </li>
+        <!-- <li class="active"><a class="nav-link" href="blank.html"><i class="far fa-square"></i> <span>Blank Page</span></a></li>
+        <li class="nav-item dropdown">
+            <a href="#" class="nav-link has-dropdown"><i class="fas fa-th"></i> <span>Bootstrap</span></a>
+            <ul class="dropdown-menu">
+                <li><a class="nav-link" href="bootstrap-alert.html">Alert</a></li>
+                <li><a class="nav-link" href="bootstrap-badge.html">Badge</a></li>
+            </ul>
+        </li>
+        <li><a class="nav-link" href="credits.html"><i class="fas fa-pencil-ruler"></i> <span>Credits</span></a></li> -->
+    </ul>
 
-        <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
-            <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
-                </div>
-                <div class="sidebar-brand-text mx-3">UAI Found It!</div>
-            </a>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider my-0">
-
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
-                <a class="nav-link" href="index.html">
-                    <i class="fas fa-home"></i>
-                    <span>Dashboard</span></a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                MASTER DATA
-            </div>
-
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#collapseTwo" data-bs-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Components</span>
-                </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Components:</h6>
-                        <a class="collapse-item" href="buttons.html">Buttons</a>
-                        <a class="collapse-item" href="cards.html">Cards</a>
-                    </div>
-                </div>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Addons
-            </div>
-
-            <!-- Nav Item - Charts -->
-            <li class="nav-item">
-                <a class="nav-link" href="charts.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Charts</span></a>
-            </li>
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Tables</span></a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
-
-            <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
-
-        </ul>
-        <!-- End of Sidebar -->
+    <!-- <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
+        <a href="https://getstisla.com/docs" class="btn btn-primary btn-lg btn-block btn-icon-split">
+            <i class="fas fa-rocket"></i> Documentation
+        </a>
+    </div> -->
+</aside>

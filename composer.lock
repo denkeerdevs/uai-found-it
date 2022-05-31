@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "25b79e653d1cd56b46d4079896692eea",
+    "content-hash": "e79f977b051f39f1abf1a29b0897d443",
     "packages": [
         {
             "name": "codeigniter4/framework",
@@ -131,33 +131,33 @@
         },
         {
             "name": "laminas/laminas-escaper",
-            "version": "2.9.0",
+            "version": "2.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-escaper.git",
-                "reference": "891ad70986729e20ed2e86355fcf93c9dc238a5f"
+                "reference": "58af67282db37d24e584a837a94ee55b9c7552be"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-escaper/zipball/891ad70986729e20ed2e86355fcf93c9dc238a5f",
-                "reference": "891ad70986729e20ed2e86355fcf93c9dc238a5f",
+                "url": "https://api.github.com/repos/laminas/laminas-escaper/zipball/58af67282db37d24e584a837a94ee55b9c7552be",
+                "reference": "58af67282db37d24e584a837a94ee55b9c7552be",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.3 || ~8.0.0 || ~8.1.0"
+                "ext-ctype": "*",
+                "ext-mbstring": "*",
+                "php": "^7.4 || ~8.0.0 || ~8.1.0"
             },
             "conflict": {
                 "zendframework/zend-escaper": "*"
             },
             "require-dev": {
+                "infection/infection": "^0.26.6",
                 "laminas/laminas-coding-standard": "~2.3.0",
-                "phpunit/phpunit": "^9.3",
-                "psalm/plugin-phpunit": "^0.12.2",
-                "vimeo/psalm": "^3.16"
-            },
-            "suggest": {
-                "ext-iconv": "*",
-                "ext-mbstring": "*"
+                "maglnet/composer-require-checker": "^3.8.0",
+                "phpunit/phpunit": "^9.5.18",
+                "psalm/plugin-phpunit": "^0.16.1",
+                "vimeo/psalm": "^4.22.0"
             },
             "type": "library",
             "autoload": {
@@ -189,7 +189,83 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2021-09-02T17:10:53+00:00"
+            "time": "2022-03-08T20:15:36+00:00"
+        },
+        {
+            "name": "myth/auth",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lonnieezell/myth-auth.git",
+                "reference": "c62802b9e2ce5be931f15270811d831cc2e85457"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lonnieezell/myth-auth/zipball/c62802b9e2ce5be931f15270811d831cc2e85457",
+                "reference": "c62802b9e2ce5be931f15270811d831cc2e85457",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.3 || ^8.0"
+            },
+            "provide": {
+                "codeigniter4/authentication-implementation": "1.0"
+            },
+            "require-dev": {
+                "codeigniter4/codeigniter4": "dev-develop",
+                "codeigniter4/codeigniter4-standard": "^1.0",
+                "fakerphp/faker": "^1.9",
+                "friendsofphp/php-cs-fixer": "^3.0",
+                "mockery/mockery": "^1.0",
+                "nexusphp/cs-config": "^3.1",
+                "nexusphp/tachycardia": "^1.0",
+                "php-coveralls/php-coveralls": "^2.4",
+                "phpstan/phpstan": "^0.12",
+                "phpunit/phpunit": "^9.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Myth\\Auth\\": "src"
+                },
+                "exclude-from-classmap": [
+                    "**/Database/Migrations/**"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Lonnie Ezell",
+                    "email": "lonnieje@gmail.com",
+                    "homepage": "http://newmythmedia.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Flexible authentication/authorization system for CodeIgniter 4.",
+            "homepage": "https://github.com/lonnieezell/myth-auth",
+            "keywords": [
+                "Authentication",
+                "authorization",
+                "codeigniter"
+            ],
+            "support": {
+                "issues": "https://github.com/lonnieezell/myth-auth/issues",
+                "source": "https://github.com/lonnieezell/myth-auth/tree/v1.0.1"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/lonnieezell",
+                    "type": "github"
+                },
+                {
+                    "url": "https://www.patreon.com/lonnieezell",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2021-07-02T13:07:46+00:00"
         },
         {
             "name": "psr/log",
@@ -1307,20 +1383,20 @@
         },
         {
             "name": "psr/container",
-            "version": "2.0.1",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/container.git",
-                "reference": "2ae37329ee82f91efadc282cc2d527fd6065a5ef"
+                "reference": "c71ecc56dfe541dbd90c5360474fbc405f8d5963"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/container/zipball/2ae37329ee82f91efadc282cc2d527fd6065a5ef",
-                "reference": "2ae37329ee82f91efadc282cc2d527fd6065a5ef",
+                "url": "https://api.github.com/repos/php-fig/container/zipball/c71ecc56dfe541dbd90c5360474fbc405f8d5963",
+                "reference": "c71ecc56dfe541dbd90c5360474fbc405f8d5963",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.2.0"
+                "php": ">=7.4.0"
             },
             "type": "library",
             "extra": {
@@ -1354,9 +1430,9 @@
             ],
             "support": {
                 "issues": "https://github.com/php-fig/container/issues",
-                "source": "https://github.com/php-fig/container/tree/2.0.1"
+                "source": "https://github.com/php-fig/container/tree/2.0.2"
             },
-            "time": "2021-03-24T13:40:57+00:00"
+            "time": "2021-11-05T16:47:00+00:00"
         },
         {
             "name": "sebastian/cli-parser",
@@ -2324,25 +2400,25 @@
         },
         {
             "name": "symfony/deprecation-contracts",
-            "version": "v3.0.1",
+            "version": "v3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/deprecation-contracts.git",
-                "reference": "26954b3d62a6c5fd0ea8a2a00c0353a14978d05c"
+                "reference": "07f1b9cc2ffee6aaafcf4b710fbc38ff736bd918"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/26954b3d62a6c5fd0ea8a2a00c0353a14978d05c",
-                "reference": "26954b3d62a6c5fd0ea8a2a00c0353a14978d05c",
+                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/07f1b9cc2ffee6aaafcf4b710fbc38ff736bd918",
+                "reference": "07f1b9cc2ffee6aaafcf4b710fbc38ff736bd918",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.0.2"
+                "php": ">=8.1"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "3.0-dev"
+                    "dev-main": "3.1-dev"
                 },
                 "thanks": {
                     "name": "symfony/contracts",
@@ -2371,7 +2447,7 @@
             "description": "A generic function and convention to trigger deprecation notices",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.0.1"
+                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.1.0"
             },
             "funding": [
                 {
@@ -2387,7 +2463,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-01-02T09:55:41+00:00"
+            "time": "2022-02-25T11:15:52+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",

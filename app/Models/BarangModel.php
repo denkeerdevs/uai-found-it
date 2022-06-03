@@ -6,37 +6,19 @@ use CodeIgniter\Model;
 
 class BarangModel extends Model
 {
-    // protected $DBGroup          = 'default';
     protected $table            = 'data_barang';
     protected $primaryKey       = 'id_barang';
-    // protected $useAutoIncrement = true;
-    // protected $insertID         = 0;
-    protected $returnType       = 'array';
-    //protected $useSoftDeletes   = false;
-    //protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $returnType       = 'object';
+    protected $allowedFields    = ['nama_barang', 'kategori_barang', 'deskripsi_barang', 'lokasi_barang', 'foto_barang', 'nama_pelapor', 'email', 'no_hp'];
+    protected $useSoftDeletes   = false;
+    protected $useTimestamps    = false;
 
-    // Dates
-    // protected $useTimestamps = false;
-    // protected $dateFormat    = 'datetime';
-    // protected $createdField  = 'created_at';
-    // protected $updatedField  = 'updated_at';
-    // protected $deletedField  = 'deleted_at';
-
-    // // Validation
-    // protected $validationRules      = [];
-    // protected $validationMessages   = [];
-    // protected $skipValidation       = false;
-    // protected $cleanValidationRules = true;
-
-    // // Callbacks
-    // protected $allowCallbacks = true;
-    // protected $beforeInsert   = [];
-    // protected $afterInsert    = [];
-    // protected $beforeUpdate   = [];
-    // protected $afterUpdate    = [];
-    // protected $beforeFind     = [];
-    // protected $afterFind      = [];
-    // protected $beforeDelete   = [];
-    // protected $afterDelete    = [];
+    //function untuk relasi tabel
+    // function getAll()
+    // {
+    //     $builder    = $this->db->table('data_barang');
+    //     $builder->join('penemu_barang', 'penemu_barang.id_penemu = data_barang.id_penemu');
+    //     $query      = $builder->get();
+    //     return $query->getResult();
+    // }
 }

@@ -1,6 +1,6 @@
 <?= $this->extend('templates_admin/default') ?>
 
-<?= $this->section('content') ?>
+<?= $this->section('title') ?>
 <title>Data Masuk &mdash; UFI Admin</title>
 <?= $this->endSection() ?>
 
@@ -9,10 +9,12 @@
 <section class="section">
     <div class="section-header">
         <h1>Daftar Barang Masuk</h1>
+        <div class="section-header-button">
+            <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Tambah Data</button>
+        </div>
         <div class="section-header-breadcrumb">
-            <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
-            <div class="breadcrumb-item"><a href="#">Components</a></div>
-            <div class="breadcrumb-item">Table</div>
+            <div class="breadcrumb-item active"><a href="dashboard">Dashboard</a></div>
+            <div class="breadcrumb-item">Data Barang Masuk</div>
         </div>
     </div>
 
@@ -41,24 +43,24 @@
                                     <th>Nama Barang</th>
                                     <th>Jenis Barang</th>
                                     <th>Lokasi Ditemukan</th>
-                                    <th>Tanggal Ditemukan</th>
-                                    <th>Status</th>
+                                    <th>Ditemukan oleh</th>
+                                    <!-- <th>Status</th> -->
                                     <th>Aksi</th>
                                 </tr>
                                 <?php $i = 1; ?>
                                 <?php foreach ($data_barang as $barang) : ?>
                                     <tr>
                                         <td><?= $i++; ?></td>
-                                        <td><?= $barang['nama_barang'] ?></td>
-                                        <td><?= $barang['kategori_barang'] ?></td>
-                                        <td><?= $barang['lokasi_barang'] ?></td>
-                                        <td><?= $barang['tanggal_ditemukan'] ?></td>
-                                        <td>
+                                        <td><?= $barang->nama_barang ?></td>
+                                        <td><?= $barang->kategori_barang ?></td>
+                                        <td><?= $barang->lokasi_barang ?></td>
+                                        <td><?= $barang->nama_pelapor ?></td>
+                                        <!-- <td>
                                             <div class="badge badge-success">Active</div>
-                                        </td>
-                                        <td class="text-center">
-                                            <a href="#" class="btn btn-warning btn-sm"><i class="fas fa-pencil-alt"></i></a>
-                                            <a href="#" class="btn btn-success btn-sm">Konfirmasi</a>
+                                        </td> -->
+                                        <td>
+                                            <a href="#" class="btn btn-primary"><i class="fas fa-info"></i></a>
+                                            <a href="#" class="btn btn-success">Konfirmasi</a>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>
@@ -87,4 +89,63 @@
         </div>
     </div>
 </section>
+<div class="modal fade" tabindex="-1" role="dialog" id="exampleModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Tambah Data Barang</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form action="<?= site_url('databarang/tambah_data') ?>" method="post" enctype="multipart/form-data">
+                <?= csrf_field(); ?>
+                <div class="modal-body">
+                    <div class="form-group row">
+                        <label for="nama_barang" class="col-sm-3 col-form-label">Nama Barang</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="nama_barang" name="nama_barang" placeholder="Tuliskan nama barang">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="kategori" class="col-sm-3 col-form-label">Kategori</label>
+                        <div class="col-sm-9">
+                            <select name="kategori" class="form-control">
+                                <option value="" hidden placeholder="Pilih kategori"></option>
+                                <option value="Elektronik">Elektronik</option>
+                                <option value="Buku/Majalah">Buku/Majalah</option>
+                                <option value="Alat Tulis">Alat Tulis</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="deskripsi" class="col-sm-3 col-form-label">Deskripsi</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="deskripsi" name="deskripsi" placeholder="Tuliskan deskripsi barang">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="lokasi" class="col-sm-3 col-form-label">Lokasi</label>
+                        <div class="col-sm-9">
+                            <input type="lokasi" class="form-control" id="lokasi" name="lokasi" placeholder="Tuliskan lokasi barang ditemukan">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="gambar" class="col-sm-3 col-form-label">Gambar Barang</label>
+                        <div class="col-sm-9">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="gambar" name="gambar">
+                                <label class="custom-file-label" for="gambar">Klik disini untuk menambah gambar</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer bg-whitesmoke br">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                    <button type="submit" class="btn btn-primary">Simpan</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 <?= $this->endSection() ?>

@@ -44,9 +44,9 @@ class Home extends BaseController
             'deskripsi_barang'  => $this->request->getVar('deskripsi'),
             'lokasi_barang'     => $this->request->getVar('lokasi'),
             'foto_barang'       => $namaFoto,
-            'nama_penemu'       => $this->request->getVar('nama_pelapor'),
-            'email_penemu'      => $this->request->getVar('email_penemu'),
-            'no_hp_penemu'      => $this->request->getVar('no_hp')
+            'nama_pelapor'      => $this->request->getVar('nama_pelapor'),
+            'email'             => $this->request->getVar('email_penemu'),
+            'no_hp'             => $this->request->getVar('no_hp')
         ]);
 
         return redirect()->to('/home');

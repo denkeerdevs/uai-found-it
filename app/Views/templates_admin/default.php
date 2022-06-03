@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
     <?= $this->renderSection('title') ?>
+    <link rel="shortcut icon" type="image/x-icon" href="<?= base_url(); ?>/assets/img/icon.ico">
 
     <!-- General CSS Files -->
     <!-- <link rel="stylesheet" href="<?= base_url() ?>/assets/admin/node_modules/bootstap/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->

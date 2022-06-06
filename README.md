@@ -1,8 +1,20 @@
-# CodeIgniter 4 Application Starter
+# UAI Found It!
 
-## What is CodeIgniter?
+## Apa itu UAI Found It!?
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
+UAI Found It! adalah aplikasi berbasis web yang memfasilitasi mahasiswa Universitas Al Azhar Indonesia untuk melaporkan barang yang hilang di sekitar kampus UAI.
+
+## Siapa yang menciptakan??
+
+UAI Found It! diciptakan dari sebuah ide dari kelompok mata kuliah Proyek Perangkat Lunak Informatika 2019 'The Denker' yang beranggotakan:
+
+- Aldo Ramadhan
+- Bagus dwi santoso
+- Hilmi Darmaputra
+- Muhammad Fauzan
+- SyarifaH Hani
+
+<!-- CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
 More information can be found at the [official site](http://codeigniter.com).
 
 This repository holds a composer-installable app starter.
@@ -60,4 +72,4 @@ Additionally, make sure that the following extensions are enabled in your PHP:
 - json (enabled by default - don't turn it off)
 - [mbstring](http://php.net/manual/en/mbstring.installation.php)
 - [mysqlnd](http://php.net/manual/en/mysqlnd.install.php)
-- xml (enabled by default - don't turn it off)
+- xml (enabled by default - don't turn it off) -->

@@ -2,19 +2,11 @@
 
 namespace App\Controllers;
 
-use App\Models\UsersModel;
-
 class Home extends BaseController
 {
-    protected $usersModel;
-    public function __construct()
-    {
-        $this->usersModel = new UsersModel();
-    }
     public function index()
     {
         echo view('templates_user/header');
-        #echo view('templates/v_sidebar');
         echo view('templates_user/topbar');
         echo view('views_user/index');
         echo view('templates_user/footer');
@@ -22,13 +14,30 @@ class Home extends BaseController
 
     public function form_lapor()
     {
+        $data = [
+            'validation' => \Config\Services::validation()
+        ];
         echo view('templates_user/header');
-        echo view('views_user/form_lapor');
-        echo view('templates_user/footer');
+        echo view('templates_user/topbar');
+        echo view('views_user/form_lapor', $data);
+        echo view('templates_user/footer2');
     }
 
     public function save_barang()
     {
+        //validasi input
+        if (!$this->validate([
+            'nama_barang'       => 'required',
+            'kategori_barang'   => 'required',
+            'deskripsi'         => 'required',
+            'lokasi'            => 'required',
+            'nama_pelapor'      => 'required',
+            'email_penemu'      => 'required',
+            'no_hp'             => 'required'
+        ])) {
+            return redirect()->to('/home/form_lapor')->withInput();
+        }
+
         //dd($this->request->getVar()); //untuk cek masuk db apa engga
         //$this->nama model->save(apa yang mau disave pake array)
         //ambil foto
@@ -48,6 +57,8 @@ class Home extends BaseController
             'email'             => $this->request->getVar('email_penemu'),
             'no_hp'             => $this->request->getVar('no_hp')
         ]);
+
+        session()->setFlashdata('pesan', 'Laporan barang hilang telah kami terima');
 
         return redirect()->to('/home');
     }

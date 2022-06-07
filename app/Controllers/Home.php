@@ -47,7 +47,7 @@ class Home extends BaseController
         //pindahkan ke folder img
         $fileFoto->move('img');
 
-        $this->usersModel->save([
+        $this->modelBarang->save([
             'nama_barang'       => $this->request->getVar('nama_barang'),
             'kategori_barang'   => $this->request->getVar('kategori_barang'),
             'deskripsi_barang'  => $this->request->getVar('deskripsi'),

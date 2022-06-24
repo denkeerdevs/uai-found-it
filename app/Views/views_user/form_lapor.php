@@ -74,7 +74,7 @@
                     </div>
                 </div>
                 <div class="d-grid gap-2 col-6 mx-auto mb-5 mt-5">
-                    <button class="btn btn-primary" type="submit">LAPOR!</button>
+                    <button class="btn btn-primary" type="submit">Lapor Barang Hilang</button>
                 </div>
             </form>
         </div>

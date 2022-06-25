@@ -37,6 +37,7 @@ $routes->addRedirect('/', 'home');
 $routes->get('admin/dashboard', 'Admin::index');
 $routes->get('admin/data-masuk', 'DataBarang::index');
 $routes->get('admin/data-keluar', 'DataBarang::data_keluar');
+$routes->get('/admin/data-masuk/(:segment)', 'DataBarang::detail/$1');
 
 /*
  * --------------------------------------------------------------------

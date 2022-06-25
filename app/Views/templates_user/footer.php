@@ -1,14 +1,14 @@
 <!-- Footer -->
 <footer class="sticky-footer bg-black">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row row-cols-md-4">
             <div class="footer-col">
                 <h4>Head Office</h4>
                 <ul class="nav flex-column">
                     <li>
-                        Komplek Masjid Agung Al Azhar<br>
-                        Jl. Sisingamangaraja, Kebayoran Baru<br>
-                        Jakarta Selatan 12110<br>
+                        Komplek Masjid Agung Al Azhar
+                        Jl. Sisingamangaraja, Kebayoran Baru
+                        Jakarta Selatan 12110 <br>
                         Telp: (021) 727 92753<br>
                         Fax: (021) 724 4767<br>
                         E-Mail: info@uai.ac.id
@@ -32,13 +32,11 @@
             <div class="footer-col">
                 <h4>Follow Us</h4>
                 <div class="Sosial Link">
-                    <ul class="nav flex-column">
-                        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </ul>
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
             <!-- Footer CSS Style -->

@@ -1,7 +1,7 @@
 <?= $this->extend('templates_admin/default') ?>
 
 <?= $this->section('title') ?>
-<title>Data Masuk &mdash; UFI Admin</title>
+<title>Data Masuk | UFI Admin</title>
 <?= $this->endSection() ?>
 
 <!--nama 'content' sesuaikan yang ada di templates/default-->
@@ -10,14 +10,18 @@
     <div class="section-header">
         <h1>Daftar Barang Masuk</h1>
         <div class="section-header-button">
-            <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Tambah Data</button>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#tambahModal">Tambah Data</button>
         </div>
         <div class="section-header-breadcrumb">
             <div class="breadcrumb-item active"><a href="dashboard">Dashboard</a></div>
             <div class="breadcrumb-item">Data Barang Masuk</div>
         </div>
     </div>
-
+    <?php if (session()->getFlashdata('pesan')) : ?>
+        <div class="alert alert-success" role="alert">
+            <?= session()->getFlashdata('pesan'); ?>
+        </div>
+    <?php endif; ?>
     <div class="section-body">
         <div class="row">
             <div class="col-12">
@@ -44,7 +48,7 @@
                                     <th>Jenis Barang</th>
                                     <th>Lokasi Ditemukan</th>
                                     <th>Ditemukan oleh</th>
-                                    <!-- <th>Status</th> -->
+                                    <th>Status</th>
                                     <th>Aksi</th>
                                 </tr>
                                 <?php $i = 1; ?>
@@ -55,12 +59,12 @@
                                         <td><?= $barang->kategori_barang ?></td>
                                         <td><?= $barang->lokasi_barang ?></td>
                                         <td><?= $barang->nama_pelapor ?></td>
+                                        <td><?= $barang->status ?></td>
                                         <!-- <td>
                                             <div class="badge badge-success">Active</div>
                                         </td> -->
                                         <td>
-                                            <a href="#" class="btn btn-primary"><i class="fas fa-info"></i></a>
-                                            <a href="#" class="btn btn-success">Konfirmasi</a>
+                                            <a href="/admin/data-masuk/<?= $barang->id_barang ?>" class="btn btn-primary"><i class="fas fa-info"></i></a>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>
@@ -89,7 +93,7 @@
         </div>
     </div>
 </section>
-<div class="modal fade" tabindex="-1" role="dialog" id="exampleModal">
+<div class="modal fade" tabindex="-1" role="dialog" id="tambahModal">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -145,6 +149,19 @@
                     <button type="submit" class="btn btn-primary">Simpan</button>
                 </div>
             </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="detailModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Tambah Data Barang</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
         </div>
     </div>
 </div>

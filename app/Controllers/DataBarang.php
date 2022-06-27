@@ -40,4 +40,10 @@ class DataBarang extends BaseController
         $this->modelBarang->insert($data);
         return redirect()->to('admin/data-masuk')->with('success', 'Data Berhasil Disimpan');
     }
+
+    public function data_verifikasi()
+    {
+        $data['data_barang'] = $this->modelBarang->findAll();
+        return view('views_admin/data_verifikasi', $data);
+    }
 }

@@ -9,7 +9,7 @@ class DataBarang extends BaseController
 {
     public function index()
     {
-        $data['data_barang'] = $this->modelBarang->findAll();
+        $data['data_barang'] = $this->modelBarang->getAll();
         return view('views_admin/data_masuk', $data);
     }
 
@@ -34,11 +34,24 @@ class DataBarang extends BaseController
             'foto_barang'       => $namaFoto,
             'nama_pelapor'      => 'admin',
             'email'             => 'admin@uai.ac.id',
-            'no_hp'             => '082111222333'
+            'no_hp'             => '082111222333',
+            'status'            => '2'
         ];
 
         $this->modelBarang->insert($data);
-        return redirect()->to('admin/data-masuk')->with('success', 'Data Berhasil Disimpan');
+        session()->setFlashdata('pesan', 'Data barang hilang Berhasil Disimpan');
+        return redirect()->to('admin/data-masuk');
+    }
+
+    public function detail($id_barang = null)
+    {
+        $detail = $this->modelBarang->find($id_barang);
+        if (is_object($detail)) {
+            $data['detail'] = $this->modelBarang->where(['id_barang' => $id_barang])->first();
+            return view('views_admin/detail_barang', $data);
+        } else {
+            throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
+        }
     }
 
     public function data_verifikasi()

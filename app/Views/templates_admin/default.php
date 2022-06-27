@@ -8,8 +8,6 @@
     <link rel="shortcut icon" type="image/x-icon" href="<?= base_url(); ?>/assets/img/icon.ico">
 
     <!-- General CSS Files -->
-    <!-- <link rel="stylesheet" href="<?= base_url() ?>/assets/admin/node_modules/bootstap/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
-    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="<?= base_url() ?>/assets/admin/assets/bootstrap/dist1/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?= base_url() ?>/assets/admin/assets/@fortawesome/fontawesome-free/css/all.css">
 
@@ -34,63 +32,6 @@
                         <input class="form-control" type="search" placeholder="Search" aria-label="Search" data-width="250">
                         <button class="btn" type="submit"><i class="fas fa-search"></i></button>
                         <div class="search-backdrop"></div>
-                        <div class="search-result">
-                            <div class="search-header">
-                                Histories
-                            </div>
-                            <div class="search-item">
-                                <a href="#">How to hack NASA using CSS</a>
-                                <a href="#" class="search-close"><i class="fas fa-times"></i></a>
-                            </div>
-                            <div class="search-item">
-                                <a href="#">Kodinger.com</a>
-                                <a href="#" class="search-close"><i class="fas fa-times"></i></a>
-                            </div>
-                            <div class="search-item">
-                                <a href="#">#Stisla</a>
-                                <a href="#" class="search-close"><i class="fas fa-times"></i></a>
-                            </div>
-                            <div class="search-header">
-                                Result
-                            </div>
-                            <div class="search-item">
-                                <a href="#">
-                                    <img class="mr-3 rounded" width="30" src="../assets/img/products/product-3-50.png" alt="product">
-                                    oPhone S9 Limited Edition
-                                </a>
-                            </div>
-                            <div class="search-item">
-                                <a href="#">
-                                    <img class="mr-3 rounded" width="30" src="../assets/img/products/product-2-50.png" alt="product">
-                                    Drone X2 New Gen-7
-                                </a>
-                            </div>
-                            <div class="search-item">
-                                <a href="#">
-                                    <img class="mr-3 rounded" width="30" src="../assets/img/products/product-1-50.png" alt="product">
-                                    Headphone Blitz
-                                </a>
-                            </div>
-                            <div class="search-header">
-                                Projects
-                            </div>
-                            <div class="search-item">
-                                <a href="#">
-                                    <div class="search-icon bg-danger text-white mr-3">
-                                        <i class="fas fa-code"></i>
-                                    </div>
-                                    Stisla Admin Template
-                                </a>
-                            </div>
-                            <div class="search-item">
-                                <a href="#">
-                                    <div class="search-icon bg-primary text-white mr-3">
-                                        <i class="fas fa-laptop"></i>
-                                    </div>
-                                    Create a new Homepage Design
-                                </a>
-                            </div>
-                        </div>
                     </div>
                 </form>
                 <ul class="navbar-nav navbar-right">
@@ -144,7 +85,7 @@
                     </li>
                     <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
                             <img alt="image" src="/assets/img/no-profile.png" class="rounded-circle mr-1">
-                            <div class="d-sm-none d-lg-inline-block">Hi, Admin User</div>
+                            <div class="d-sm-none d-lg-inline-block">Hi, </div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
                             <div class="dropdown-title">Logged in 5 min ago</div>
@@ -175,10 +116,10 @@
             </div>
             <footer class="main-footer">
                 <div class="footer-left">
-                    Copyright &copy; 2022 <div class="bullet"></div> Developed By <a href="https://nauval.in/">The Denker Team</a>
+                    Copyright &copy; 2022 <div class="bullet"></div> Developed By <a href="">The Denker Team</a>
                 </div>
                 <div class="footer-right">
-                    2.3.0
+                    1.0.0
                 </div>
             </footer>
         </div>
@@ -186,16 +127,11 @@
 
     <!-- General JS Scripts -->
     <script src="<?= base_url() ?>/assets/admin/assets/jquery/dist1/jquery.min.js"></script>
+    <script src="<?= base_url() ?>/assets/admin/assets/popper.js/dist1/popper.min.js"></script>
     <script src="<?= base_url() ?>/assets/admin/assets/bootstrap/dist1/js/bootstrap.min.js"></script>
     <script src="<?= base_url() ?>/assets/admin/assets/jquery.nicescroll/dist1/jquery.nicescroll.min.js"></script>
+    <script src="<?= base_url() ?>/assets/admin/assets/moment/min/moment.min.js"></script>
     <script src="<?= base_url() ?>/assets/admin/assets/js/stisla.js"></script>
-
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="<?= base_url() ?>/assets/admin/assets/js/stisla.js"></script> -->
 
     <!-- JS Libraies -->
 

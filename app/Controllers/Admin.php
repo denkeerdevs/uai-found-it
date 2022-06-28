@@ -8,4 +8,9 @@ class Admin extends BaseController
     {
         echo view('views_admin/dashboard');
     }
+
+    public function profile()
+    {
+        echo view('views_admin/profile');
+    }
 }

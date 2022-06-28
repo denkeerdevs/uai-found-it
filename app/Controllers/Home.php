@@ -14,7 +14,12 @@ class Home extends BaseController
 
     public function home()
     {
-        echo view('templates_user2/default.php');
+        echo view('views_user/home.php');
+    }
+
+    public function katalog_barang()
+    {
+        echo view('views_user/katalog_barang.php');
     }
 
     public function form_lapor()
@@ -30,19 +35,6 @@ class Home extends BaseController
 
     public function save_barang()
     {
-        //validasi input
-        if (!$this->validate([
-            'nama_barang'       => 'required',
-            'kategori_barang'   => 'required',
-            'deskripsi'         => 'required',
-            'lokasi'            => 'required',
-            'nama_pelapor'      => 'required',
-            'email_penemu'      => 'required',
-            'no_hp'             => 'required'
-        ])) {
-            return redirect()->to('/home/form_lapor')->withInput();
-        }
-
         //dd($this->request->getVar()); //untuk cek masuk db apa engga
         //$this->nama model->save(apa yang mau disave pake array)
         //ambil foto
@@ -50,31 +42,29 @@ class Home extends BaseController
         //generate nama file foto random
         $namaFoto = $fileFoto->getRandomName();
         //pindahkan ke folder img
-        $fileFoto->move('img');
+        $fileFoto->move('img', $namaFoto);
+
+        $kode_barang = $this->modelBarang->kodeBarang();
 
         $this->modelBarang->save([
+            'kode_barang'       => $kode_barang,
             'nama_barang'       => $this->request->getVar('nama_barang'),
             'kategori_barang'   => $this->request->getVar('kategori_barang'),
             'deskripsi_barang'  => $this->request->getVar('deskripsi'),
             'lokasi_barang'     => $this->request->getVar('lokasi'),
+            'tanggal_ditemukan' => $this->request->getVar('tanggal'),
             'foto_barang'       => $namaFoto,
             'nama_pelapor'      => $this->request->getVar('nama_pelapor'),
             'email'             => $this->request->getVar('email_penemu'),
             'no_hp'             => $this->request->getVar('no_hp')
         ]);
-
-        session()->setFlashdata('pesan', 'Terima kasih, laporan barang hilang telah kami terima');
-
-        return redirect()->to('/home');
+        //memunculkan alert data masuk db
+        // session()->setFlashdata('pesan', 'Terima kasih, laporan barang hilang telah kami terima');
+        return redirect()->to('home/success');
     }
 
-    public function card_barang()
+    public function success()
     {
-        //return view('welcome_message');
-        echo view('templates_user/header');
-        #echo view('templates/v_sidebar');
-        #echo view('templates/v_topbar');
-        echo view('views_user/card_barang');
-        echo view('templates_user/footer');
+        echo view('views_user/success_input.php');
     }
 }

@@ -33,6 +33,15 @@ class Home extends BaseController
         echo view('templates_user/footer');
     }
 
+    public function form_claim()
+    {
+        echo view('templates_user/header');
+        echo view('templates_user/topbar');
+        echo view('views_user/form_claim');
+        echo view('templates_user/footer2');
+    }
+
+
     public function save_barang()
     {
         //dd($this->request->getVar()); //untuk cek masuk db apa engga

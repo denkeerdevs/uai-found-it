@@ -58,6 +58,7 @@
                             <div class="dropdown-footer text-center">
                                 <a href="#">View All <i class="fas fa-chevron-right"></i></a>
                             </div>
+
                         </div>
                     </li>
                     <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg beep"><i class="far fa-bell"></i></a>
@@ -89,7 +90,7 @@
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
                             <div class="dropdown-title">Logged in 5 min ago</div>
-                            <a href="features-profile.html" class="dropdown-item has-icon">
+                            <a href="<?= base_url('admin/profile'); ?>" class="dropdown-item has-icon">
                                 <i class="far fa-user"></i> Profile
                             </a>
                             <a href="features-activities.html" class="dropdown-item has-icon">

@@ -1,7 +1,7 @@
 <?= $this->extend('templates_admin/default') ?>
 
 <?= $this->section('title') ?>
-<title>Dashboard &mdash; UFI Admin</title>
+<title>Dashboard | UFI Admin</title>
 <?= $this->endSection() ?>
 
 <!--nama 'content' sesuaikan yang ada di templates/default-->

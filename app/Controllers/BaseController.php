@@ -52,5 +52,6 @@ class BaseController extends Controller
         $this->db   = \Config\Database::connect();
         $this->modelBarang = new \App\Models\BarangModel();
         $this->modelPenemu = new \App\Models\PenemuModel();
+        $this->modelAdmin = new \App\Models\AdminModel();
     }
 }

@@ -8,6 +8,9 @@
     <ul class="sidebar-menu">
         <li class="menu-header">Dashboard</li>
         <li><a class="nav-link" href="<?= site_url('admin/dashboard') ?>"><i class="fas fa-home"></i> <span>Dashboard</span></a></li>
+        <?php if (in_groups('superadmin')) : ?>
+        <li><a class="nav-link" href="<?= site_url('admin/manage_admin') ?>"><i class="fas fa-users"></i> <span>Manage Admin</span></a></li>
+        <?php endif; ?>
 
         <li class="menu-header">MASTER DATA</li>
         <li class="nav-item dropdown">
@@ -29,6 +32,6 @@
     </ul>
 
     <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
-        <a href="" class="btn btn-danger btn-lg btn-block btn-icon-split">KELUAR</a>
+        <a href="/logout" class="btn btn-danger btn-lg btn-block btn-icon-split">KELUAR</a>
     </div>
 </aside>

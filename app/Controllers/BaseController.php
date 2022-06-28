@@ -51,10 +51,7 @@ class BaseController extends Controller
         session();
         $this->db   = \Config\Database::connect();
         $this->modelBarang = new \App\Models\BarangModel();
-<<<<<<< HEAD
         $this->modelPenemu = new \App\Models\PenemuModel();
         $this->modelAdmin = new \App\Models\AdminModel();
-=======
->>>>>>> c63c9d23b883576295bbe0ffcb8e9096c0beb2e5
     }
 }

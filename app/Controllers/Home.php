@@ -12,6 +12,11 @@ class Home extends BaseController
         echo view('templates_user/footer');
     }
 
+    public function home()
+    {
+        echo view('templates_user2/default.php');
+    }
+
     public function form_lapor()
     {
         $data = [
@@ -20,8 +25,17 @@ class Home extends BaseController
         echo view('templates_user/header');
         echo view('templates_user/topbar');
         echo view('views_user/form_lapor', $data);
+        echo view('templates_user/footer');
+    }
+
+    public function form_claim()
+    {
+        echo view('templates_user/header');
+        echo view('templates_user/topbar');
+        echo view('views_user/form_claim');
         echo view('templates_user/footer2');
     }
+
 
     public function save_barang()
     {
@@ -58,7 +72,7 @@ class Home extends BaseController
             'no_hp'             => $this->request->getVar('no_hp')
         ]);
 
-        session()->setFlashdata('pesan', 'Laporan barang hilang telah kami terima');
+        session()->setFlashdata('pesan', 'Terima kasih, laporan barang hilang telah kami terima');
 
         return redirect()->to('/home');
     }

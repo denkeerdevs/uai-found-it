@@ -12,7 +12,7 @@ UAI Found It! diciptakan dari sebuah ide dari kelompok mata kuliah Proyek Perang
 - Bagus dwi santoso
 - Hilmi Darmaputra
 - Muhammad Fauzan
-- SyarifaH Hani
+- Syarifah Hani
 
 <!-- CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
 More information can be found at the [official site](http://codeigniter.com).

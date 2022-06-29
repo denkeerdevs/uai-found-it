@@ -34,7 +34,8 @@ $routes->setAutoRoute(true);
 // $routes->get('/', 'Home::index');
 
 $routes->addRedirect('/', 'home');
-$routes->get('admin/dashboard', 'Admin::index');
+$routes->get('admin/dashboard', 'Admin::index', ['filter' => 'role:superadmin,admin']);
+$routes->get('admin/manage_admin', 'Admin::manage_admin', ['filter' => 'role:superadmin']);
 $routes->get('admin/data-masuk', 'DataBarang::index');
 $routes->get('admin/data-keluar', 'DataBarang::data_keluar');
 $routes->get('/admin/data-masuk/(:segment)', 'DataBarang::detail/$1');

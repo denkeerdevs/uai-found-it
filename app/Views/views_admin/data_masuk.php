@@ -134,6 +134,10 @@
                             <input type="lokasi" class="form-control" id="lokasi" name="lokasi" placeholder="Tuliskan lokasi barang ditemukan">
                         </div>
                     </div>
+                    <div class="form-group">
+                        <label for="tanggal">Tanggal Ditemukan</label>
+                        <input type="date" class="form-control" id="tanggal" name="tanggal" required="">
+                    </div>
                     <div class="form-group row">
                         <label for="gambar" class="col-sm-3 col-form-label">Gambar Barang</label>
                         <div class="col-sm-9">

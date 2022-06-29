@@ -20,17 +20,19 @@ class DataBarang extends BaseController
 
     public function tambah_data()
     {
-        $fileFoto = $this->request->getFile('gambar');
-        //generate nama file foto random
+        $fileFoto = $this->request->getFile('foto');
         $namaFoto = $fileFoto->getRandomName();
-        //pindahkan ke folder img
-        $fileFoto->move('img');
+        $fileFoto->move('img', $namaFoto);
+
+        $kode_barang = $this->modelBarang->kodeBarang();
 
         $data = [
+            'kode_barang'       => $kode_barang,
             'nama_barang'       => $this->request->getVar('nama_barang'),
             'kategori_barang'   => $this->request->getVar('kategori'),
             'deskripsi_barang'  => $this->request->getVar('deskripsi'),
             'lokasi_barang'     => $this->request->getVar('lokasi'),
+            'tanggal_ditemukan' => $this->request->getVar('tanggal'),
             'foto_barang'       => $namaFoto,
             'nama_pelapor'      => 'admin',
             'email'             => 'admin@uai.ac.id',

@@ -56,9 +56,9 @@
 
                     <hr>
 
-<?php if ($config->activeResetter) : ?>
-                    <p><a href="<?= route_to('forgot') ?>"><?= lang('Auth.forgotYourPassword') ?></a></p>
-<?php endif; ?>
+                    <?php if ($config->activeResetter) : ?>
+                        <p><a href="<?= route_to('forgot') ?>"><?= lang('Auth.forgotYourPassword') ?></a></p>
+                    <?php endif; ?>
                 </div>
             </div>
 

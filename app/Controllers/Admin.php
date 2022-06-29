@@ -14,4 +14,9 @@ class Admin extends BaseController
         $data['users'] = $this->modelAdmin->findAll();
         return view('views_admin/manage_admin', $data);
     }
+
+    public function profile()
+    {
+        echo view('views_admin/profile');
+    }
 }

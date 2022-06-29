@@ -33,7 +33,7 @@
                 </div>
                 <div class="card-wrap">
                     <div class="card-header">
-                        <h4>Data Barang Masuk</h4>
+                        <h4>Barang Masuk Hari Ini</h4>
                     </div>
                     <div class="card-body">
                         20
@@ -43,12 +43,12 @@
         </div>
         <div class="col-lg-3 col-md-6 col-sm-6 col-12">
             <div class="card card-statistic-1">
-                <div class="card-icon bg-warning">
+                <div class="card-icon bg-success">
                     <i class="far fa-file"></i>
                 </div>
                 <div class="card-wrap">
                     <div class="card-header">
-                        <h4>Reports Barang Keluar</h4>
+                        <h4>Report Barang Masuk</h4>
                     </div>
                     <div class="card-body">
                         10
@@ -58,12 +58,12 @@
         </div>
         <div class="col-lg-3 col-md-6 col-sm-6 col-12">
             <div class="card card-statistic-1">
-                <div class="card-icon bg-success">
-                    <i class="fas fa-circle"></i>
+                <div class="card-icon bg-warning">
+                    <i class="fas fa-file"></i>
                 </div>
                 <div class="card-wrap">
                     <div class="card-header">
-                        <h4>Online Users</h4>
+                        <h4>Report Barang Keluar</h4>
                     </div>
                     <div class="card-body">
                         47

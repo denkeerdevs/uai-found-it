@@ -50,8 +50,8 @@ class BaseController extends Controller
         // E.g.: $this->session = \Config\Services::session();
         session();
         $this->db   = \Config\Database::connect();
-        $this->modelBarang = new \App\Models\BarangModel();
-        $this->modelPenemu = new \App\Models\PenemuModel();
-        $this->modelAdmin = new \App\Models\AdminModel();
+        $this->modelBarang  = new \App\Models\BarangModel();
+        $this->modelPenemu  = new \App\Models\PenemuModel();
+        $this->modelAdmin   = new \App\Models\AdminModel();
     }
 }

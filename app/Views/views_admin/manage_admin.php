@@ -1,7 +1,7 @@
 <?= $this->extend('templates_admin/default') ?>
 
 <?= $this->section('title') ?>
-<title>Dashboard &mdash; UFI Admin</title>
+<title>Manage Admin | UFI Admin</title>
 <?= $this->endSection() ?>
 
 <!--nama 'content' sesuaikan yang ada di templates/default-->
@@ -42,13 +42,13 @@
                                     <th>Status(Active)</th>
                                     <th>Aksi</th>
                                 </tr>
-                                <?php /*$i = 1; ?>
-                                <?php foreach ($users as $user) : ?>
+                                <?php $i = 1; ?>
+                                <?php foreach ($users as $us) : ?>
                                     <tr>
                                         <td><?= $i++; ?></td>
-                                        <td><?= $user->email ?></td>
-                                        <td><?= $user->username ?></td>
-                                        <td><?= $user->active ?></td>
+                                        <td><?= $us->email ?></td>
+                                        <td><?= $us->username ?></td>
+                                        <td><?= $us->active ?></td>
                                         <td>
                                             <div class="badge badge-success">Active</div>
                                         </td>
@@ -57,7 +57,7 @@
                                             <a href="#" class="btn btn-success">Konfirmasi</a>
                                         </td>
                                     </tr>
-                                <?php endforeach; */?>
+                                <?php endforeach; ?>
                             </table>
                         </div>
                     </div>

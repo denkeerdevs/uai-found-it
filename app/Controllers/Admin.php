@@ -8,9 +8,10 @@ class Admin extends BaseController
     {
         echo view('views_admin/dashboard');
     }
-    
+
     public function manage_admin()
     {
-        echo view('views_admin/manage_admin');
+        $data['users'] = $this->modelAdmin->findAll();
+        return view('views_admin/manage_admin', $data);
     }
 }

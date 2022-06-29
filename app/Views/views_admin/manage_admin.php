@@ -57,7 +57,7 @@
                                             <a href="#" class="btn btn-success">Konfirmasi</a>
                                         </td>
                                     </tr>
-                                <?php endforeach; */?>
+                                <?php endforeach; */ ?>
                             </table>
                         </div>
                     </div>

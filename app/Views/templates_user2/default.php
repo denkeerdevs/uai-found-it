@@ -25,28 +25,27 @@
                 <img src="/assets/img/land_white.png" style="width: 150px;">
             </a>
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                <li><a href="#" class="nav-link px-2 text-white">Home</a></li>
+                <li><a href="home" class="nav-link px-2 text-white">Home</a></li>
                 <li><a href="#" class="nav-link px-2 text-white">About</a></li>
             </ul>
         </div>
     </div>
 </header>
 
-<body>
-    <div id="app">
+<body class="layout-3">
+    <div class="main-wrapper container">
         <!-- Main Content -->
         <div class="main-content">
             <?= $this->renderSection('content') ?>
         </div>
-
-        <footer class="footer mt-auto">
-            <div class="container">
-                <ul class="nav justify-content-center border-bottom pb-3 mb-3"></ul>
-                <p class="text-center text-muted">© 2022 The Denkér Developer Team</p>
-            </div>
-        </footer>
-
     </div>
+
+    <footer class="footer mt-auto">
+        <div class="container">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3"></ul>
+            <p class="text-center text-muted">© 2022 The Denkér Developer Team</p>
+        </div>
+    </footer>
     <!-- General JS Scripts -->
     <script src="<?= base_url() ?>/assets/admin/assets/jquery/dist1/jquery.min.js"></script>
     <script src="<?= base_url() ?>/assets/admin/assets/popper.js/dist1/popper.min.js"></script>
@@ -57,10 +56,13 @@
 
     <!-- JS Libraies -->
     <script src="<?= base_url() ?>/assets/admin/assets/sticky-kit/dist1/sticky-kit.min.js"></script>
+    <script src="<?= base_url() ?>/assets/admin/assets/sweetalert/dist1/sweetalert.min.js"></script>
 
     <!-- Template JS File -->
     <script src="<?= base_url() ?>/assets/admin/assets/js/scripts.js"></script>
     <script src="<?= base_url() ?>/assets/admin/assets/js/custom.js"></script>
+
+    <script src="<?= base_url() ?>/assets/admin/assets/sweetalert/dist1/modules-sweetalert.js"></script>
 
 </body>
 

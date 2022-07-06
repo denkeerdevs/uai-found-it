@@ -737,7 +737,7 @@ select.form-control:not([size]):not([multiple]) {
     border-top: 2px solid #191d21; }
   .card.card-hero .card-header {
     padding: 40px;
-    background-image: linear-gradient(to bottom, #6777ef, #95a0f4);
+    background-image: linear-gradient(to bottom, #2b7a78, #3aafa9);
     color: #fff;
     overflow: hidden;
     height: auto;
@@ -752,7 +752,7 @@ select.form-control:not([size]):not([multiple]) {
       font-size: 16px; }
     .card.card-hero .card-header .card-icon {
       float: right;
-      color: #8c98f3;
+      color: #3aafa9;
       margin: -60px; }
       .card.card-hero .card-header .card-icon .ion, .card.card-hero .card-header .card-icon .fas, .card.card-hero .card-header .card-icon .far, .card.card-hero .card-header .card-icon .fab, .card.card-hero .card-header .card-icon .fal {
         font-size: 140px; }
@@ -1600,7 +1600,7 @@ h6 .badge {
       left: 34px;
       content: '\f0d8';
       font-weight: 600;
-      font-family: 'Font Awesome 5 Free';
+      font-family: "Nunito", "Segoe UI", arial;
       color: #fff;
       font-size: 30px; }
     .navbar .form-inline .search-result .search-header {
@@ -1931,6 +1931,9 @@ ul.nav-tabs li.nav-item a.nav-link.active i {
 
 /* 3.22 Jumbotron */
 .jumbotron {
+  background-image: url('/assets/img/bg_img.png');
+  background-size: cover;
+  height: 700px;
   background-color: #e3eaef; }
 
 /* 3.23 Carousel */
@@ -1955,7 +1958,7 @@ body, html {
   min-height: 100%; }
 
 body {
-  background-color: #f4f6f9;
+  background-color: #def2f1;
   font-size: 14px;
   font-weight: 400;
   font-family: "Nunito", "Segoe UI", arial;
@@ -2570,7 +2573,7 @@ body.sidebar-mini .main-sidebar {
         background-color: #fff; }
         body.sidebar-mini .main-sidebar .sidebar-menu > li ul.dropdown-menu li a.has-dropdown:after {
           content: "";
-          font-family: 'Font Awesome 5 Free';
+          font-family: "Nunito", "Segoe UI", arial;
           font-weight: 900;
           position: absolute;
           top: 50%;
@@ -2683,7 +2686,7 @@ body.layout-3 .navbar.navbar-secondary {
       margin-right: 35px; }
       body.layout-3 .navbar.navbar-secondary .navbar-nav > .nav-item > .nav-link.has-dropdown:after {
         content: "";
-        font-family: 'Font Awesome 5 Free';
+        font-family: "Nunito", "Segoe UI", arial;
         font-weight: 900;
         position: absolute;
         top: 50%;
@@ -2719,7 +2722,7 @@ body.layout-3 .navbar.navbar-secondary {
       padding-right: 20px !important; }
       body.layout-3 .navbar.navbar-secondary .navbar-nav > .nav-item .dropdown-menu .nav-item .nav-link.has-dropdown:after {
         content: "";
-        font-family: 'Font Awesome 5 Free';
+        font-family: "Nunito", "Segoe UI", arial;
         font-weight: 900;
         position: absolute;
         top: 50%;
@@ -2743,7 +2746,7 @@ body.layout-3 .navbar.navbar-secondary {
 body.layout-3 .main-content {
   padding-left: 0;
   padding-right: 0;
-  padding-top: 170px; }
+  padding-top: 30px; }
 
 body.layout-3 .main-footer {
   padding-left: 0;
@@ -2823,7 +2826,7 @@ body.layout-3 .main-footer {
       background-color: #f8fafb; }
     .main-sidebar .sidebar-menu li a.has-dropdown:after {
       content: "";
-      font-family: 'Font Awesome 5 Free';
+      font-family: "Nunito", "Segoe UI", arial;
       font-weight: 900;
       position: absolute;
       top: 50%;

@@ -21,7 +21,7 @@
                         <h4>Total Admin</h4>
                     </div>
                     <div class="card-body">
-                        5
+                        <?= $total_admin ?>
                     </div>
                 </div>
             </div>

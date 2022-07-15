@@ -58,7 +58,7 @@ class DataBarang extends BaseController
 
     public function data_verifikasi()
     {
-        $data['data_barang'] = $this->modelBarang->findAll();
-        return view('views_admin/data_verifikasi', $data);
+        $data['data_verif'] = $this->modelBarang->verifikasi();
+        return view('views_admin/data_verif', $data);
     }
 }

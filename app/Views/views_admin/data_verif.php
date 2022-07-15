@@ -28,8 +28,9 @@
                             <h4>Tanggal Laporan: <?= $verif->tanggal_ditemukan ?></h4>
                             <div class="card-header-action">
                                 <a href="#" class="btn btn-success">
-                                    Konfirmasi
-                                </a>
+                                    <a href="/admin/confirm/<?= $verif->id_barang ?>" class="btn btn-success">
+                                        Konfirmasi
+                                    </a>
                             </div>
                         </div>
                         <div class="card-body">

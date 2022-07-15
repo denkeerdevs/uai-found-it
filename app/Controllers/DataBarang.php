@@ -60,5 +60,18 @@ class DataBarang extends BaseController
     {
         $data['data_verif'] = $this->modelBarang->verifikasi();
         return view('views_admin/data_verif', $data);
+<<<<<<< HEAD
+=======
+    }
+
+    public function konfirmasi($id)
+    {
+        $this->modelBarang->save([
+            'id_barang' => $id,
+            'status' => '2'
+        ]);
+
+        return redirect()->to('admin/data-masuk');
+>>>>>>> 8da25c0a7c006bfc039f3416bf6cfe30e44f6f77
     }
 }

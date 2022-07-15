@@ -16,6 +16,7 @@
                         Lihat daftar barang hilang dan segera klaim barang jika itu barang kamu sebelum kadaluarsa
                     </p>
                     <p>Ingin melapor barang hilang? <a href="home" class="mt-4 bb">Lapor disini</a></p>
+                    <p>Ingin melapor barang hilang? <a href="/home" class="mt-4 bb">Lapor disini</a></p>
                 </div>
             </div>
         </div>
@@ -26,7 +27,7 @@
                     <div class="card card-primary">
                         <div class="card-body">
                             <img class="img-fluid" src="/img/<?= $ktg->foto_barang ?>">
-                            <p>Found on <?= $ktg->tanggal_ditemukan ?></p>
+                            <p>Found on <?= date('d F Y', strtotime($ktg->tanggal_ditemukan)); ?></p>
                         </div>
                     </div>
 

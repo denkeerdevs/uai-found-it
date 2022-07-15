@@ -38,11 +38,6 @@ $routes->get('admin/dashboard', 'Admin::index', ['filter' => 'role:superadmin,ad
 $routes->get('admin/manage_admin', 'Admin::manage_admin', ['filter' => 'role:superadmin']);
 $routes->get('admin/data-masuk', 'DataBarang::index');
 $routes->get('admin/data-keluar', 'DataBarang::data_keluar');
-$routes->get('admin/verifikasi', 'DataBarang::data_verifikasi');
-<<<<<<< HEAD
-=======
-$routes->get('/admin/confirm/(:segment)', 'DataBarang::konfirmasi/$1');
->>>>>>> 8da25c0a7c006bfc039f3416bf6cfe30e44f6f77
 $routes->get('/admin/data-masuk/(:segment)', 'DataBarang::detail/$1');
 
 /*

@@ -9,9 +9,8 @@
         <li class="menu-header">Dashboard</li>
         <li><a class="nav-link" href="<?= site_url('admin/dashboard') ?>"><i class="fas fa-home"></i> <span>Dashboard</span></a></li>
         <?php if (in_groups('superadmin')) : ?>
-            <li><a class="nav-link" href="<?= site_url('admin/manage_admin') ?>"><i class="fas fa-users"></i> <span>Manage Admin</span></a></li>
+        <li><a class="nav-link" href="<?= site_url('admin/manage_admin') ?>"><i class="fas fa-users"></i> <span>Manage Admin</span></a></li>
         <?php endif; ?>
-        <li><a class="nav-link" href="<?= site_url('admin/verifikasi') ?>"><i class="far fa-file-alt"></i> <span>Verifikasi Barang Masuk</span></a></li>
 
         <li class="menu-header">MASTER DATA</li>
         <li class="nav-item dropdown">

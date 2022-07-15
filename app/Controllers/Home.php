@@ -6,7 +6,10 @@ class Home extends BaseController
 {
     public function index()
     {
-        echo view('views_user/home.php');
+        echo view('templates_user/header');
+        echo view('templates_user/topbar');
+        echo view('views_user/index');
+        echo view('templates_user/footer');
     }
 
     public function home()
@@ -16,8 +19,7 @@ class Home extends BaseController
 
     public function katalog_barang()
     {
-        $data['katalog'] = $this->modelBarang->katalog();
-        return view('views_user/katalog_barang', $data);
+        echo view('views_user/katalog_barang.php');
     }
 
     public function form_lapor()

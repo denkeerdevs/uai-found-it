@@ -50,12 +50,4 @@ class BarangModel extends Model
         $query      = $builder->get();
         return $query->getResult();
     }
-
-    public function verifikasi()
-    {
-        $builder = $this->db->table('data_barang');
-        $builder->where("status=1");
-        $query   = $builder->get();
-        return $query->getResult();
-    }
 }

@@ -46,7 +46,7 @@ class Home extends BaseController
             'tanggal_ditemukan' => $this->request->getVar('tanggal'),
             'foto_barang'       => $namaFoto,
             'nama_pelapor'      => $this->request->getVar('nama_pelapor'),
-            'email'             => $this->request->getVar('email_penemu'),
+            'email'             => $this->request->getVar('email'),
             'no_hp'             => $this->request->getVar('no_hp')
         ]);
         //memunculkan alert data masuk db

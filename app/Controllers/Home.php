@@ -6,13 +6,31 @@ class Home extends BaseController
 {
     public function index()
     {
+        echo view('templates_user/header');
+        echo view('templates_user/topbar');
+        echo view('views_user/index');
+        echo view('templates_user/footer');
+    }
+
+    public function home()
+    {
         echo view('views_user/home.php');
     }
 
     public function katalog_barang()
     {
-        $data['katalog'] = $this->modelBarang->katalog();
-        return view('views_user/katalog_barang', $data);
+        echo view('views_user/katalog_barang.php');
+    }
+
+    public function form_lapor()
+    {
+        $data = [
+            'validation' => \Config\Services::validation()
+        ];
+        echo view('templates_user/header');
+        echo view('templates_user/topbar');
+        echo view('views_user/form_lapor', $data);
+        echo view('templates_user/footer');
     }
 
     public function form_claim()
